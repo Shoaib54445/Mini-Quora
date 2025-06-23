@@ -1,0 +1,17 @@
+h1 {
+    color: maroon;
+}
+
+.post {
+    background-color: blanchedalmond;
+    padding-left: 15px;
+    border-radius: 10px;
+}
+
+.user {
+    font-style: italic;
+}
+
+.del {
+    margin-bottom: 15px;
+}
