@@ -3,7 +3,8 @@ const app=express();
 const path=require("path");
 const { v4: uuidv4 } = require('uuid');
 //uuidv4(); // ⇨ '1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed'
-var methodOverride = require('method-override')
+var methodOverride = require('method-override');
+const open = require('open').default;
 
 app.set("view engine","ejs")//necessary to use ejs templates
 app.set("views",path.join(__dirname,"/views"));//setting path for views folder
@@ -82,14 +83,7 @@ app.delete("/posts/:id/delete",(req,res)=>{
 })
 
 
-app.listen(port, ()=>{
-    console.log("Server is listening on port",port);
-    console.log("This is extra line");
-})
-
-
-// function fun(){
-//     let id = Date.now().toString(36);
-//     console.log(id);
-// }
-// fun();
+app.listen(port, () => {
+    console.log("Server is listening on port", port);
+    open(`http://localhost:${port}/posts`);
+});
