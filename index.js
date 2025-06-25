@@ -84,6 +84,7 @@ app.delete("/posts/:id/delete",(req,res)=>{
 
 app.listen(port, ()=>{
     console.log("Server is listening on port",port);
+    console.log("This is extra line");
 })
 
 
